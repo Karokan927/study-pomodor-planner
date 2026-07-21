@@ -5,10 +5,10 @@ let VolumeBtn = document.getElementById('volume-range');
 
 
 let BreakMusic = new Audio();
-BreakMusic.src = '/audio/breakzvuk.wav'
+BreakMusic.src = 'audio/breakzvuk.wav'
 BreakMusic.loop = true;
 
-let TimerBell = new Audio('/audio/timer-bell_m1tycbno.mp3');
+let TimerBell = new Audio('audio/timer-bell_m1tycbno.mp3');
 
 
 const savedVolume = localStorage.getItem('study-volume') || 0.5;
