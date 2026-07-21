@@ -1,0 +1,38 @@
+#progress-bar-fill {
+    display: block;
+    background-color: aqua;
+    height: 2rem;
+    width: 0;
+    border-radius: 3px;
+}
+
+.progress-bar-container {
+    width: 20rem;
+    display: block;
+    border: 2px solid var(--gray-1);
+    border-radius: 5px;
+}
+
+.stats-container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 50rem;
+}
+
+#stats {
+    width: 100%;
+}
+
+.stat-progress {
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.stat-progress-text {
+    display: flex;
+    flex-direction: row;
+}

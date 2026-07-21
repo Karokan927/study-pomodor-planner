@@ -1,0 +1,45 @@
+# Smart Study & Pomodoro Planner
+
+An interactive Single Page Application (SPA) designed to help students organize their learning process, track tasks, and focus on studying using the Pomodoro technique.
+
+
+
+---
+
+## Features
+
+- Dynamic To-Do List: Create, delete, and check off study tasks.
+- Automated Pomodoro Timer: Seamlessly switches between 25-minute work blocks and 5-minute break sessions with automatic notification alerts.
+- Persistent Data: All tasks, timer states, and user configurations are fully preserved using browser localStorage (data survives page reloads).
+- Cross-Page Visual Sync: Micro-timer display synced across different application sections.
+- Custom UI Themes: Support for multiple design themes (Light, Dark) with smooth CSS transitions.
+- Visual Analytics: Interactive performance tracking bar and charts.
+
+---
+
+## Tech Stack
+
+- HTML5: Semantic architecture.
+- CSS3: Custom properties (CSS variables) for theme management.
+- JavaScript (ES6+): Clean Vanilla JS split into modular files (tab.js, timer.js, todo.js, theme.js, data.js, settings.js, volume.js).
+- **Data Persistence:** Browser LocalStorage API.
+- **Libraries:** (https://www.jsdelivr.com) for productivity graphs. 
+
+---
+
+## Upcoming Updates
+
+- Custom user file upload support (.mp3 and .wav file reader) to let users play their own music tracks.
+- Dedicated Settings Modal Window for deeper timer configuration (custom session length, intervals). 
+- Major UI/UX Redesign with modern glassmorphism or minimalist neumorphic visual elements.
+
+---
+
+## How to Run Locally
+
+1. Clone the repository:
+  
+   git clone https://github.com/karokan927/study-pomodor-planner.git
+   
+2. Open index.html directly in your preferr
+ed web browser.

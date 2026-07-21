@@ -1,0 +1,1 @@
+export let SoundContainer = document.getElementById('volume');

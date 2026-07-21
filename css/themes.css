@@ -1,0 +1,33 @@
+.theme-container {
+    width: 10rem;
+    height: 20rem;
+    background-color: var(--gray-2);
+    border-radius: 10px;
+    margin: 2rem 0 0 10rem;
+    position: absolute;
+    border: 2px solid var(--gray-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.theme-item {
+    display: flex;
+    background-color: #333;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.themes-block {
+    display: none;
+}
+
+.themes-block.active {
+    display: flex;
+}

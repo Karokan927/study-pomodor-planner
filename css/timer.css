@@ -1,0 +1,59 @@
+#timer {
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+
+#timer-display {
+    margin: 4rem auto;
+    display: flex;
+    font-size: 256px;
+    border: 10px solid var(--gray-1);
+    border-radius: 50px;
+    padding: 1rem 5rem;
+}
+
+.timer-control {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timer-btn {
+    height: 6rem;
+    width: 18rem;
+    border-radius: 5px;
+    border: 2px solid var(--gray-1);
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 24px;
+    font-weight: 600;
+    &:hover {
+        background-color: var(--gray-2);
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#timer-active-task {
+    font-size: 32px;
+    margin: 2rem auto;
+    display: flex;
+    width: inherit;
+    align-items: center;
+    overflow: hidden;
+}
+
+.active-task-text {
+    margin-right: 20px;;
+}
+
+.timer-text {
+    font-size: 32px;
+    display: flex;
+    margin: 0 auto;
+}

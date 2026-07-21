@@ -1,0 +1,59 @@
+#tasks {
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+#todo-form {
+    margin: 5rem 0 3rem 0;
+    display: flex;
+
+}
+
+#todo-input {
+    height: 2rem;
+    width: 20rem;
+    font-size: 24px;
+    border: 2px solid var(--gray-1);
+    border-radius: 4px;
+    padding-left: 9px;
+}
+
+.todo-button {
+    height: 36px;
+    width: 6rem;
+    font-size: 24px;
+    border: 2px solid var(--gray-1);
+    border-radius: 4px;
+    margin-left: 0.2rem;
+    color: var(--black-2);
+    cursor: pointer;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    width: 28rem;
+    background-color: var(--gray-2);
+    border: 2px solid var(--gray-1);
+    border-radius: 4px;
+    margin-bottom: 3px;
+    align-items: center;
+}
+
+.todo-delete-btn, .todo-checkbox, .todo-follow {
+    height: inherit;
+    width: 4rem;
+    cursor: pointer;
+}
+
+.todo-item .completed {
+    text-decoration: line-through;
+}
+
+.todo-text {
+    font-size: 24px;
+    overflow: hidden;
+    width: 15rem;
+}
+

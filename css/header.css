@@ -1,0 +1,28 @@
+.nav-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: flex;
+}
+
+.tab-btn {
+    flex: 1;
+    height: 3rem;
+    border-bottom: 2px solid var(--black-1);
+    border-left: 1px solid var(--black-1);
+    border-right: 2px solid var(--black-1);
+    cursor: pointer;
+    background-color: var(--gray-1);
+    color: var(--text-main);
+}
+
+.tab-btn.active {
+    background-color: var(--gray-2);
+}

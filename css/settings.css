@@ -1,0 +1,120 @@
+.settings-container { 
+  display: inline-flex; 
+  flex-direction: column; 
+  align-items: center; 
+  position: absolute; 
+  margin: 2rem 3rem; 
+  padding: 8px; 
+  background-color: var(--gray-2); 
+  border-radius: 35px; 
+  max-height: 76px; 
+  transition: max-height 1s cubic-bezier(0.25, 1, 0.5, 1), border-radius 0.3s ease; 
+  overflow: hidden; 
+}
+
+.settings-container:has(.settings-list.closing) {
+  max-height: 60px;
+  border-radius: 35px;
+}
+
+.settings-container:has(.settings-list.active) { 
+  max-height: 350px; 
+  border-radius: 35px; 
+}
+
+#settings-main-btn { 
+  width: 60px; 
+  height: 60px; 
+  border-radius: 50%; 
+  border: none; 
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background: transparent; 
+}
+
+.settings-list { 
+  display: none; 
+  flex-direction: column; 
+}
+
+
+.settings-list.active,
+.settings-list.closing { 
+  display: flex; 
+}
+
+.settings-btn { 
+  width: 60px; 
+  height: 60px; 
+  border-radius: 50%; 
+  border: none; 
+  cursor: pointer; 
+  margin-top: 10px; 
+  background-color: var(--gray-2); 
+}
+
+
+.settings-list.active .settings-btn { 
+  opacity: 0; 
+  transform: translateY(-50px) scale(0.3); 
+  animation: PopIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; 
+}
+.settings-list.active .settings-btn:nth-child(1) { animation-delay: 0.1s; } 
+.settings-list.active .settings-btn:nth-child(2) { animation-delay: 0.2s; } 
+.settings-list.active .settings-btn:nth-child(3) { animation-delay: 0.3s; }
+
+
+.settings-list.closing .settings-btn { 
+  animation: PopOut 0.3s ease-in-out forwards; 
+} 
+.settings-list.closing .settings-btn:nth-child(1) { animation-delay: 0.2s; } 
+.settings-list.closing .settings-btn:nth-child(2) { animation-delay: 0.1s; } 
+.settings-list.closing .settings-btn:nth-child(3) { animation-delay: 0s; }
+
+@keyframes PopIn { 
+  to { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+  } 
+}
+
+@keyframes PopOut { 
+  to { 
+    opacity: 0; 
+    transform: translateY(0) scale(0); 
+  } 
+}
+
+.settings-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.volume {
+  display: none;
+  position: absolute;
+  margin: 180px 0 0 10rem;
+}
+
+.volume.active {
+  display: flex;
+}
+
+.volume-container {
+  width: 16rem;
+  height: 4rem;
+  background-color: var(--gray-2);
+  border: 2px solid var(--gray-1);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#volume-range {
+  width: 13rem;
+  accent-color: #fff;
+  
+}
