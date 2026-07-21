@@ -4,7 +4,7 @@ const BREAK_TIME = 5 * 60;
 const WORK_TIME = 25 * 60;
 
 export let TimerState = JSON.parse(localStorage.getItem('study-timer-state')) || {
-    timeLeft: DEFAULT_TIME,
+    timeLeft: WORK_TIME,
     isRunning: false,
     pomodorosCompleted: 0,
     isWorkSession: true
