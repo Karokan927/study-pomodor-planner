@@ -2,7 +2,7 @@
 
 An interactive Single Page Application (SPA) designed to help students organize their learning process, track tasks, and focus on studying using the Pomodoro technique.
 
-
+https://karokan927.github.io/study-pomodor-planner/
 
 ---
 
