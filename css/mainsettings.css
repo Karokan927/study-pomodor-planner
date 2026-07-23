@@ -1,0 +1,69 @@
+#MainSettings {
+    display: none;
+    
+}
+
+#MainSettings.active {
+    display: flex;
+}
+
+.settings-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    display: none;
+}
+
+.settings-overlay.active {
+    display: block;
+}
+
+.MainSettings-container {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    margin-top: 40px;
+    background-color: var(--gray-2);
+    width: 80rem;
+    height: 45rem;
+    display: flex;
+    border: 3px solid var(--gray-1);
+    z-index: 999;
+    
+    border-radius: 15px;
+}
+
+.MainSettings-aside {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    padding: 2rem 0;
+    border-right: 3px solid var(--gray-1) ;
+    max-height: 100%;
+}
+
+.MainSettings-content {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    padding: 2rem 2rem;
+    max-height: 100%;
+    
+}
+
+.MainSettings-aside-item {
+    margin-bottom: 2rem;
+    height: 2rem;
+    max-width: 100%;
+}
+
+.MainSettings-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}

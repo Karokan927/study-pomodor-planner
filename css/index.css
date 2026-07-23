@@ -12,7 +12,9 @@ body {
     color: var(--text-main);
 }
 
-
+ul {
+    list-style-type: none;
+}
 
 :root {
     --main-bg:#f4f4f4;

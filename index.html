@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/addtimer.css">
     <link rel="stylesheet" href="css/settings.css">
     <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/mainsettings.css">
 </head>
 
 <body id="MainBody" class="white-theme">
@@ -24,19 +25,94 @@
         </nav>
     </header>
     <main>
+        <section id="MainSettings">
+            <div id="SettingsOverlay" class="settings-overlay"></div>
+            <div class="MainSettings-container">
+                <div class="MainSettings-aside">
+                    <nav>
+                        <ul>
+                            <li class="MainSettings-aside-item">
+                                <h3></h3>
+                            </li>
+                            <li class="MainSettings-aside-item">
+                                <h3></h3>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="MainSettings-content">
+                    <div class="MainSettings-list">
+                        <div class="MainSettings-music">
+                            <h4>Music settings</h4>
+                            <p>You can upload your own audio files</p>
+                            <div class="MainSettings-item">
+                                <span>Work time</span>
+                                <input type="file" id="UserWorkMusic">
+                                <button id="ClearMusicBtn" data-0>Clear</button>
+                            </div>
+                            <div class="MainSettings-item">
+                                <span>Signal</span>
+                                <input type="file" id="UserSignalMusic">
+                                <button id="ClearMusicBtn" data-2>Clear</button>
+                            </div>
+                            <div class="MainSettings-item">
+                                <span>Break time</span>
+                                <input type="file" id="UserBreakMusic">
+                                <button id="ClearMusicBtn" data-1>Clear</button>
+                            </div>
+                            <h3>Note: Total size of all music files must be under 5 MB</h3>
+                        </div>
+                        <div class="MainSettings-Autostart">
+                            <h4>Automation</h4>
+                            <div class="MainSettings-item">
+                                <p>Auto-start break</p>
+                                <input id="AutoBreak" type="checkbox">
+                            </div>
+                            <div class="MainSettings-item">
+                                <p>Auto-start next session</p>
+                                <input id="AutoSession" type="checkbox">
+                            </div>
+                        </div>
+                        <div class="MainSettings-time">
+                            <h4>Choose a preset that works best for you:</h4>
+                            <div class="MainSettings-item">
+                                <p>Classical: 25/5</p>
+                                <input class="MainSettings-timeSelector" data-mode="classic" type="checkbox">
+                            </div>
+                            <div class="MainSettings-item">
+                                <p>Long focus: 50/10</p>
+                                <input class="MainSettings-timeSelector" data-mode="long" type="checkbox">
+                            </div>
+                            <div class="MainSettings-item">
+                                <p>Micro-session: 15/3</p>
+                                <input class="MainSettings-timeSelector" data-mode="short" type="checkbox">
+                            </div>
+                        </div>
+                        <div class="MainSettings-reload">
+                            <h4>Support & Reset</h4>
+                            <h4>Having issues? Click here</h4>
+                            <h4>Reset all settings to default</h4>
+                            <button id="Restore">Restore Defaults</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section>
             <div class="settings-container">
                 <button id="settings-main-btn">
-                    <img class="settings-icon" src="svg/settings-svgrepo-com.svg">
+                    <img class="settings-icon" src="svg/menu-svgrepo-com.svg">
                 </button>
                 <div class="settings-list" id="settings-list">
                     <button class="settings-btn" id="settings-theme-btn">
                         <img class="settings-icon" src="svg/theme-store-svgrepo-com.svg">
                     </button>
                     <button class="settings-btn volume-btn" id="">
-                        <img class="settings-icon" src="svg/volume-max-svgrepo-com.svg">
+                        <img class="settings-icon" id="volume-icon" src="svg/volume-xmark-svgrepo-com.svg">
                     </button>
-                    <button class="settings-btn" id="">soon</button>
+                    <button class="settings-btn" id="OpenSettingsBtn">
+                        <img class="settings-icon" src="svg/settings-svgrepo-com.svg">
+                    </button>
                 </div>
             </div>
         </section>
@@ -101,7 +177,7 @@
             </div>
         </section>
     </main>
-    <script src="https://www.jsdelivr.com/package/npm/chart.js?path=dist"></script>
+    <!-- <script src="https://www.jsdelivr.com/package/npm/chart.js?path=dist"></script> -->
     <script type='module' src="js/tab.js"></script>
     <script type="module" src="js/todo.js"></script>
     <script type='module' src="js/timer.js"></script>
@@ -109,6 +185,7 @@
     <script type='module' src="js/theme.js"></script>
     <script type='module' src="js/volume.js"></script>
     <script type='module' src="js/data.js"></script>
+    <script type='module' src="js/mainsettings.js"></script>
 </body>
 
 </html>

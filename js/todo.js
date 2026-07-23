@@ -18,6 +18,7 @@ if (activeTask) {
 clearActiveTaskBtn.addEventListener('click', () => {
     activeTaskText.textContent = '';
     activeTaskContainer.classList.add('hidden');
+    localStorage.setItem('active-task', '')
 })
 
 
@@ -107,7 +108,7 @@ let ProgressText = document.getElementById('progress-text');
 function updateTaskStats() {
     const TodoLength = todos.length;
     const TodoCompleted = todos.filter(t => t.completed).length;
-    const TodoPercent = Math.ceil((TodoCompleted / TodoLength) * 100);
+    const TodoPercent = Math.ceil((TodoCompleted / TodoLength) * 100)||0;
     ProgressBar.style.width = `${TodoPercent / 5}rem`;
     ProgressText.textContent = `${TodoPercent}% tasks were completed`;
 }

@@ -1,7 +1,6 @@
-import { playBreakMusic, stopBreakMusic, playBell } from "./volume.js";
-
-const BREAK_TIME = 5 * 60;
-const WORK_TIME = 25 * 60;
+import { playBreakMusic, stopBreakMusic, playBell, playWorkMusic, stopWorkMusic } from "./volume.js";
+import { AutoBreak, AutoStart } from "./mainsettings.js";
+import { BREAK_TIME, WORK_TIME } from "./mainsettings.js";
 
 export let TimerState = JSON.parse(localStorage.getItem('study-timer-state')) || {
     timeLeft: WORK_TIME,
@@ -55,8 +54,11 @@ function tick() {
         saveTimerState();
         updateTimerDisplay();
     } else {
+        stopWorkMusic();
         if (TimerState.isWorkSession) {
-            alert('Nice job! Have a break!');
+            if (!AutoBreak) {
+                alert('Nice job! Have a break!');
+            };
             TimerState.isWorkSession = false;
             TimerState.timeLeft = BREAK_TIME;
             TimerState.pomodorosCompleted += 1;
@@ -67,7 +69,9 @@ function tick() {
             MyChart.update();
             playBreakMusic();
         } else {
-            alert('Break is over! Time to work!')
+            if (!AutoStart) {
+                alert('Break is over! Time to work!');
+            }
             TimerState.isWorkSession = true;
             TimerState.timeLeft = WORK_TIME;
             stopBreakMusic();
@@ -91,6 +95,8 @@ TimerStart.addEventListener('click', function () {
     TimerInterval = setInterval(tick, 1000);
     if (!TimerState.isWorkSession) {
         playBreakMusic();
+    } else {
+        playWorkMusic();
     }
 })
 
@@ -100,9 +106,10 @@ TimerStop.addEventListener('click', function () {
     saveTimerState();
     clearInterval(TimerInterval);
     stopBreakMusic();
+    stopWorkMusic();
 })
 
-TimerReset.addEventListener('click', function () {
+export function resetTime() {
     clearInterval(TimerInterval);
     TimerState.isRunning = false;
     TimerState.timeLeft = WORK_TIME;
@@ -111,7 +118,10 @@ TimerReset.addEventListener('click', function () {
     TimerState.isWorkSession = true;
     changeTimerText();
     stopBreakMusic();
-})
+    stopWorkMusic();
+}
+
+TimerReset.addEventListener('click', resetTime());
 
 
 updateTimerDisplay();

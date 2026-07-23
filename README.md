@@ -28,9 +28,8 @@ https://karokan927.github.io/study-pomodor-planner/
 ---
 
 ## Upcoming Updates
-
-- Custom user file upload support (.mp3 and .wav file reader) to let users play their own music tracks.
-- Dedicated Settings Modal Window for deeper timer configuration (custom session length, intervals). 
+- Cross-Device Mobile Optimization: Implement responsive media queries and fluid layouts to prevent elements from shifting on different screen resolutions. 
+- New Advanced Features: Integration of extra productivity tools and extended task configurations.
 - Major UI/UX Redesign with modern glassmorphism or minimalist neumorphic visual elements.
 
 ---
