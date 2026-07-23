@@ -40,5 +40,4 @@ https://karokan927.github.io/study-pomodor-planner/
   
    git clone https://github.com/karokan927/study-pomodor-planner.git
    
-2. Open index.html directly in your preferr
-ed web browser.
+2. Open index.html directly in your preferred web browser.
