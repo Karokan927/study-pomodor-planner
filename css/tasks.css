@@ -1,12 +1,18 @@
 #tasks {
     margin: 0 auto;
     flex-direction: column;
+    width: auto;
 }
+
+#todo-list {
+    max-height: 26.5rem;
+    overflow-y: scroll;
+}
+
 
 #todo-form {
     margin: 5rem 0 3rem 0;
     display: flex;
-
 }
 
 #todo-input {
@@ -16,11 +22,12 @@
     border: 2px solid var(--gray-1);
     border-radius: 4px;
     padding-left: 9px;
+    padding-right: 5px;
 }
 
 .todo-button {
     height: 36px;
-    width: 6rem;
+    width: 7rem;
     font-size: 24px;
     border: 2px solid var(--gray-1);
     border-radius: 4px;
@@ -55,5 +62,24 @@
     font-size: 24px;
     overflow: hidden;
     width: 15rem;
+}
+
+@media (max-width: 720px) {
+    #tasks {
+        
+    }
+
+    .todo-text {
+        width: 10rem;
+    }
+
+    .todo-item {
+        width: 23rem;
+    }
+
+    #todo-input {
+        width: 15rem;
+        
+    }
 }
 

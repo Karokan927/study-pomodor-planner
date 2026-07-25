@@ -57,3 +57,33 @@
     display: flex;
     margin: 0 auto;
 }
+
+@media (max-width: 1260px) and (min-width:960px) {
+    #timer-display {
+        font-size: 196px;
+    }
+
+    .timer-btn {
+        width: 15rem;
+    }
+}
+
+@media (min-width:560px) and (max-width: 959px) {
+    #timer-display {
+        font-size: 128px;
+    }
+
+    .timer-btn {
+        width: 11rem;
+    }
+}
+
+@media (max-width: 559px) {
+    #timer-display {
+        font-size: 64px;
+    }
+
+    .timer-btn {
+        width: 7.5rem;
+    }
+}

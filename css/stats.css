@@ -36,3 +36,11 @@
     display: flex;
     flex-direction: row;
 }
+
+
+@media (max-width:920px) {
+    .stats-container {
+        width: 90%;
+    }
+
+}

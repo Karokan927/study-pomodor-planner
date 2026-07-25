@@ -37,6 +37,8 @@
     border-radius: 15px;
 }
 
+
+
 .MainSettings-aside {
     display: flex;
     flex-direction: column;
@@ -67,3 +69,22 @@
     display: flex;
     align-items: center;
 }
+
+@media (min-width:1080px) and (max-width:1448px) {
+    .MainSettings-container {
+        width: 60rem;
+    }
+}
+
+@media (max-width:1079px) and (min-width:720px){
+    .MainSettings-container {
+        width: 40rem;
+    }
+}
+
+@media (max-width:719px) {
+    .MainSettings-container {
+        width: 24rem;
+    }
+}
+

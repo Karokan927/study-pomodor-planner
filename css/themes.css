@@ -31,3 +31,11 @@
 .themes-block.active {
     display: flex;
 }
+
+@media (max-width:720px) {
+    .theme-container {
+        margin: 0;
+        bottom: 10rem;
+        left: 2.5rem;
+    }
+}
