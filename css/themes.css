@@ -20,6 +20,7 @@
     border-radius: 15px;
     color: #fff;
     font-size: 24px;
+    font-weight: 600;
     align-items: center;
     justify-content: center;
 }
@@ -31,6 +32,12 @@
 .themes-block.active {
     display: flex;
 }
+
+.white-theme {
+    background-color: #fff;
+    color: var(--black-1);
+}
+
 
 @media (max-width:720px) {
     .theme-container {

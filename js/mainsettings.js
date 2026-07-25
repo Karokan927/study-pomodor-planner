@@ -77,3 +77,4 @@ RestoreBtn.addEventListener('click', () => {
   localStorage.setItem('time-name', 'classic');
   window.location.reload();
 })
+

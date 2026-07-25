@@ -1,6 +1,5 @@
 #MainSettings {
     display: none;
-    
 }
 
 #MainSettings.active {
@@ -18,6 +17,12 @@
     display: none;
 }
 
+.MainSettings-list {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
 .settings-overlay.active {
     display: block;
 }
@@ -31,10 +36,10 @@
     width: 80rem;
     height: 45rem;
     display: flex;
-    border: 3px solid var(--gray-1);
+    border: 3px solid var(--black-2);
     z-index: 999;
-    
     border-radius: 15px;
+    color: var(--text-main);
 }
 
 
@@ -53,9 +58,9 @@
     display: flex;
     flex-direction: column;
     flex: 3;
-    padding: 2rem 2rem;
+    margin: 2rem;
     max-height: 100%;
-    
+    max-width: 100%;
 }
 
 .MainSettings-aside-item {
@@ -68,7 +73,115 @@
     height: 40px;
     display: flex;
     align-items: center;
+    margin-top: 0.20rem ;
 }
+
+.MainSettings-title {
+    font-size: 24px;
+}
+
+.MainSettings-text {
+    font-size: 20px;
+
+}
+
+.MainSettings-music {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+    padding-right: 2rem;
+}
+
+.MainSettings-music .MainSettings-item span {
+    width: 6rem;
+    font-size: 20px;
+}
+
+.MainSettings-music .MainSettings-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainSettings-music .MainSettings-item input {
+    max-width: 5.4rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid var(--black-1);
+    overflow: hidden;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.MainSettings-music .MainSettings-item input[type="file"] {
+    color: transparent;
+    background-color: #fff;
+}
+
+.MainSettings-Autostart .MainSettings-item, .MainSettings-time .MainSettings-item  {
+    display: flex;
+    justify-content: space-between;
+    width: 12rem;
+}
+
+.MainSettings-Autostart .MainSettings-item input, .MainSettings-time .MainSettings-item input {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    
+}
+
+#Restore {
+    width: 10rem;
+    height: 2.3rem;
+    border: 3px solid rgb(155, 155, 155);
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.MainSettings-block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 2rem 0;
+}
+
+.MainSettings-container {
+    background: linear-gradient(to right, var(--main-bg), var(--black-2));
+    
+
+}
+.MainSettings-aside-item {
+    font-size: 36px;
+    text-shadow: 1px 1px 3px var(--text-main);
+    font-weight: bold;
+}
+
+#ClearMusicBtn {
+    display: flex;
+    border: none;
+    background: none;
+    outline: none;
+    display: inline-flex;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid var(--black-1);
+    border-radius: 16px;
+    cursor: pointer;
+    transform: all 0.2s ease;
+    background-color:var(--gray-1);
+    color: var(--text-main);
+    &:hover {
+        background-color: var(--black-2);
+        color: #fff;
+    }
+}
+
+#ClearMusicBtn button:active {
+    transform: scale(0.96);
+}
+
+
+
 
 @media (min-width:1080px) and (max-width:1448px) {
     .MainSettings-container {
@@ -84,7 +197,11 @@
 
 @media (max-width:719px) {
     .MainSettings-container {
-        width: 24rem;
+        width: 26rem;
+    }
+
+    .MainSettings-aside {
+        display: none;
     }
 }
 
