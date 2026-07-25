@@ -27,12 +27,6 @@ https://karokan927.github.io/study-pomodor-planner/
 
 ---
 
-## Upcoming Updates
-- Cross-Device Mobile Optimization: Implement responsive media queries and fluid layouts to prevent elements from shifting on different screen resolutions. 
-- New Advanced Features: Integration of extra productivity tools and extended task configurations.
-- Major UI/UX Redesign with modern glassmorphism or minimalist neumorphic visual elements.
-
----
 
 ## How to Run Locally
 
